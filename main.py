@@ -49,12 +49,28 @@ class SecretGenerator():
 
 
 def main():
+    pwd_length_input = ""
+
+    valid_input = False
+
+    while not valid_input:
+        try:
+            pwd_length_input = int(
+                input("Enter the length of password: (> 12) "))
+
+            if pwd_length_input < 12:
+                continue
+
+            valid_input = True
+        except ValueError:
+            continue
+
     generator = SecretGenerator()
 
-    pwd = generator.generate_password(18)
+    pwd = generator.generate_password(pwd_length_input)
     print(f"With Special Character: {pwd}")
 
-    alphanumeric_pwd = generator.generate_password(length=16,
+    alphanumeric_pwd = generator.generate_password(length=pwd_length_input,
                                                    alphanumeric_only=True)
     print(f"Without Special Character: {alphanumeric_pwd}")
 
