@@ -68,11 +68,11 @@ def main():
     generator = SecretGenerator()
 
     pwd = generator.generate_password(pwd_length_input)
-    print(f"With Special Character: {pwd}")
+    print(f"\nWith Special Character: {pwd}")
 
     alphanumeric_pwd = generator.generate_password(length=pwd_length_input,
                                                    alphanumeric_only=True)
-    print(f"Without Special Character: {alphanumeric_pwd}")
+    print(f"\nWithout Special Character: {alphanumeric_pwd}")
 
 
 if __name__ == '__main__':
