@@ -1,3 +1,3 @@
-# Python Password Generator
+# TTS (Python)
 
-A password generator script written in Python.
+A text-to-speech conversion script written in Python.
